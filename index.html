@@ -1,0 +1,121 @@
+
+<!--
+/*
+*Author: Akash Phadtare
+*Title: Damaged Helmet ThreeJS App
+*Description: Luma AI coding challenge
+*Credits for Damaged Helmet 3D model: https://sketchfab.com/theblueturtle_
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Damaged Helmet</title>
+    <style>
+        body {
+            min-height: 1000vh;
+            overflow-x: hidden;
+            margin: 0px;
+            font-family: monospace;
+            color: rgb(217, 217, 217);
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        main {
+            width: 100vw;
+            height: 200vh; /* If you want the height relative to the viewport height */
+            z-index: 99;
+            position: absolute;
+            justify-content: center;
+            text-align: center;
+            pointer-events: none;
+            font-size: 2vh;
+        }
+
+        .text-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%; /* Ensure it spans the full width */
+        }
+
+        .fade-text {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*For testing*/
+        #scrollProgress {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            z-index: 99;
+            font-size: 3vh;
+        }
+        
+
+        #para1 {
+            opacity: 1; /* Initially show the first paragraph */
+            transform: translate(-100%, -50%);
+        }
+
+        #para2 {
+            transform: translate(0%, -50%);
+        }
+
+        #para3 {
+            transform: translate(50%, 50%);
+        }
+
+        #para4 {
+            transform: translate(-100%, 100%);
+        }
+
+        #para5 {
+            transform: translate(-100%, -100%);
+        }
+
+    </style>
+</head>
+<body>
+
+    <span id="scrollProgress"></span>
+
+    <main>
+        <div class="text-container">
+            <div class="fade-text" id="para1">
+                <h3>Damaged Helmet</h3>
+                <p>This helmet, once a gleaming symbol of a futuristic warrior, now lies in a state of poignant disrepair.</p>
+            </div>
+            <div class="fade-text" id="para2">
+                <h3>Build</h3>
+                <p>The helmet, forged from a resilient titanium alloy, boasts a sleek, aerodynamic design that speaks to its advanced engineering.</p>
+            </div>
+            <div class="fade-text" id="para3">
+                <h3>AR Visor</h3>
+                <p>Embedded within the helmet's visor is cutting-edge Augmented Reality technology, providing real-time tactical data overlays and environmental analysis.</p>
+            </div>
+            <div class="fade-text" id="para4">
+                <h3>Neural Connection</h3>
+                <p>A sophisticated neural interface, seamlessly connecting to the wearer's brain, allowing for instant thought-controlled operation and feedback.</p>
+            </div>
+            <div class="fade-text" id="para5">
+                <h3>Interact!</h3>
+                <p></p>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
